@@ -4,7 +4,9 @@ export interface IEventAggregator {
   publish(event: string | any, data?: any): void;
   subscribe(event: string | Function, callback: Function): ISubscription;
   subscribeOnce(event: string | Function, callback: Function): ISubscription;
-  createEntityEvent(data: any, source: IEntity, context: ExecutionContext): IEvent;
+  createEntityEvent(data: any, source: IEntity, context: ExecutionContext, metadataOptions?: {
+    [key: string]: any
+  }): IEvent;
 }
 
 export interface ISubscription {
@@ -33,4 +35,5 @@ export interface IEventMetadata {
   applicationId?: string;
   context: ExecutionContext;
   response?: string;
+  options?: { [key: string]: any };
 }
