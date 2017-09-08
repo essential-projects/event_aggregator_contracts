@@ -1,11 +1,11 @@
-import {IEntity, ExecutionContext} from '@process-engine-js/core_contracts';
+import {ExecutionContext, IEntity} from '@process-engine-js/core_contracts';
 
 export interface IEventAggregator {
   publish(event: string | any, data?: any): void;
   subscribe(event: string | Function, callback: Function): ISubscription;
   subscribeOnce(event: string | Function, callback: Function): ISubscription;
   createEntityEvent(data: any, source: IEntity, context: ExecutionContext, metadataOptions?: {
-    [key: string]: any
+    [key: string]: any,
   }): IEvent;
 }
 
