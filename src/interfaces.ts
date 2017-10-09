@@ -1,4 +1,4 @@
-import {ExecutionContext, IEntity} from '@process-engine-js/core_contracts';
+import {ExecutionContext, IEntity} from '@essential-projects/core_contracts';
 
 export interface IEventAggregator {
   publish(event: string | any, data?: any): void;
