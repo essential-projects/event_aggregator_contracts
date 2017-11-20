@@ -1,3 +1,3 @@
 export interface ISubscription {
-    dispose(): void;
+  dispose(): void;
 }
