@@ -5,5 +5,5 @@ export interface IEventMetadata {
   applicationId?: string;
   context: ExecutionContext;
   response?: string;
-  options?: { [key: string]: any };
+  options?: {[key: string]: any};
 }
