@@ -16,7 +16,6 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "@essential-projects/iam_contracts": "^3.0.0",
     "@essential-projects/tslint-config": "^1.0.0",
     "gulp": "^3.9.1",
     "gulptraum": "^2.2.4",
