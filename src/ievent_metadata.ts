@@ -1,4 +1,4 @@
-import {ExecutionContext} from '@essential-projects/core_contracts';
+import {ExecutionContext} from '@essential-projects/iam_contracts';
 
 export interface IEventMetadata {
   id: string;
