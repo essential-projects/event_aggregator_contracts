@@ -1,4 +1,4 @@
-export type EventReceivedCallback = (eventPayload: any, eventName: string) => void | Promise<void>;
+export type EventReceivedCallback = (eventPayload: any, eventName?: string) => void | Promise<void>;
 
 export class Subscription {
 
