@@ -1,3 +1,5 @@
-export interface ISubscription {
-  dispose(): void;
+export class Subscription {
+  public id: string;
+  public eventName: string;
+  public callback: Function;
 }
