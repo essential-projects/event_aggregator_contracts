@@ -18,7 +18,7 @@ export interface IEventAggregator {
 
   /**
    * Creates a new Subscription for the given event.
-   * The Subscription will be deleted, after the event has been received once.
+   * The Subscription will be deleted, after the first receit of the event.
    *
    * @param   eventName The name of the event to which to susbcribe.
    * @param   callback  The function to call when the event is triggered.
@@ -37,6 +37,8 @@ export interface IEventAggregator {
 
   /**
    * Removes the given subscription from the event aggregator.
+   *
+   * If no matching subscription exists, nothing will happen.
    *
    * @param subscription The subscription to remove.
    */
