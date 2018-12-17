@@ -1,8 +1,44 @@
-import {Subscription} from './isubscription';
+import {EventReceivedCallback, Subscription} from './isubscription';
 
+/**
+ * Allows an external Service to subscribe to internal events
+ * and to publish them.
+ */
 export interface IEventAggregator {
-  publish(event: string, data?: any): void;
-  subscribe(event: string, callback: Function): Subscription;
-  subscribeOnce(event: string, callback: Function): Subscription;
+
+  /**
+   * Creates a new permanent Subscription for the given event.
+   *
+   * @param   eventName The name of the event to which to susbcribe.
+   * @param   callback  The function to call when the event is triggered.
+   * @returns           An object that contains all required information about
+   *                    the created Subscription.
+   */
+  subscribe(eventName: string, callback: EventReceivedCallback): Subscription;
+
+  /**
+   * Creates a new Subscription for the given event.
+   * The Subscription will be deleted, after the event has been received once.
+   *
+   * @param   eventName The name of the event to which to susbcribe.
+   * @param   callback  The function to call when the event is triggered.
+   * @returns           An object that contains all required information about
+   *                    the created Subscription.
+   */
+  subscribeOnce(eventName: string, callback: EventReceivedCallback): Subscription;
+
+  /**
+   * Publishes the event with the given Name and the given payload.
+   *
+   * @param eventName The name of the event to publish.
+   * @param payload   Optional: The payload to send with the event.
+   */
+  publish(eventName: string, payload?: any): void;
+
+  /**
+   * Removes the given subscription from the event aggregator.
+   *
+   * @param subscription The subscription to remove.
+   */
   unsubscribe(subscription: Subscription): void;
 }
