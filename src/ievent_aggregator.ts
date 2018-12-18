@@ -1,4 +1,4 @@
-import {EventReceivedCallback, Subscription} from './isubscription';
+import {EventReceivedCallback, Subscription} from './subscription';
 
 /**
  * Allows an external Service to subscribe to internal events

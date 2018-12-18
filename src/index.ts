@@ -1,2 +1,2 @@
 export * from './ievent_aggregator';
-export * from './isubscription';
+export * from './subscription';
