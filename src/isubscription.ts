@@ -1,10 +1,10 @@
 /**
  * Defines the signature for the Callback that an EventSubscription should have.
  *
- * @param eventPayload The payload received with the event.
+ * @param eventPayload Optional: The payload received with the event.
  * @param eventName    Optional: The name of the received event.
  */
-export type EventReceivedCallback = (eventPayload: any, eventName?: string) => void | Promise<void>;
+export type EventReceivedCallback = (eventPayload?: any, eventName?: string) => void | Promise<void>;
 
 /**
  * Contains information about a subscription on the EventAggregator.
