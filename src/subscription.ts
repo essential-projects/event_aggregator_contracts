@@ -31,4 +31,5 @@ export class Subscription {
     this.eventName = eventName;
     this.onlyReceiveOnce = onlyReceiveOnce;
   }
+
 }
